@@ -1,0 +1,258 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --blue: #1f2295;
+  --dark-blue: #083789;
+}
+
+body {
+  background-image: url(../images/backcover.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ************************************************** */
+/* Main Cntainer */
+/* ************************************************** */
+
+.main-div {
+  height: 100%;
+  width: 100%;
+}
+
+/* ************************************************** */
+/* Nav Cntainer */
+/* ************************************************** */
+
+nav {
+  height: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  color: var(--blue);
+}
+
+img[src="./images/logo.svg"] {
+  width: 130px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  font-size: 20px;
+}
+
+.signin-btn {
+  background: linear-gradient(to left, #fd297a, #9424f0);
+  border: none;
+  border-radius: 20px;
+  color: var(--white);
+  padding: 12px 28px;
+}
+
+/* ************************************************** */
+/* Intro Cntainer */
+/* ************************************************** */
+
+.intro-section {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  margin-top: 100px;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  width: 40%;
+  margin-left: 125px;
+}
+
+h1 {
+  color: var(--blue);
+  font-size: 75px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+}
+
+h4 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  color: var(--dark-blue);
+  margin-top: -75px;
+  width: 300px;
+
+  line-height: 30px;
+}
+
+.imgs-div {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+}
+
+.learn-more-btn {
+  background: linear-gradient(to left, #fd297a, #9424f0);
+  border: none;
+  border-radius: 40px;
+  color: var(--white);
+  padding: 20px 60px;
+  margin-top: -70px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: large;
+}
+
+img[src="./images/vector.svg"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-150%, 350%);
+
+  width: 60px;
+}
+
+img[src="./images/vector-dot.svg"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-370%, 1300%);
+
+  width: 15px;
+}
+
+img[src="./images/intro-img.svg"] {
+  margin-top: -30px;
+  margin-left: -55px;
+  width: 95%;
+}
+/* ************************************************** */
+/* MEDIA QUERY */
+/* ************************************************** */
+@media screen and (max-width: 990px) {
+  html,
+  body {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-position-y: top;
+  }
+  img[src="./images/logo.svg"] {
+    width: 100px;
+  }
+  .signin-btn {
+    /* width: 100px; */
+    padding: 10px 20px;
+    font-size: 10px;
+  }
+  .main-div {
+    padding: 40px;
+  }
+  nav {
+    column-gap: 15%;
+  }
+  .nav-items {
+    column-gap: 10%;
+    font-size: 13px;
+  }
+  .intro-section {
+    margin-top: 100px;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  .imgs-div {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  img[src="./images/intro-img.svg"] {
+    width: 95%;
+    height: 100%;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h4 {
+    width: 500px;
+  }
+  .left-section {
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+    margin-left: 0;
+  }
+  .learn-more-btn {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 602px) {
+  img[src="./images/logo.svg"] {
+    width: 80px;
+  }
+  .signin-btn {
+    /* width: 100px; */
+    padding: 8px 20px;
+    font-size: 8px;
+  }
+  .nav-items {
+    display: none;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h4 {
+    text-align: center;
+    width: 400px;
+    font-size: 15px;
+  }
+
+  .learn-more-btn {
+    width: 180px;
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 430px) {
+  h1 {
+    font-size: 40px;
+  }
+  h4 {
+    text-align: center;
+    width: 300px;
+    font-size: 12px;
+  }
+  .learn-more-btn {
+    width: 130px;
+    font-size: 9px;
+    padding: 15px 0;
+  }
+}
